@@ -143,7 +143,7 @@ for category in categoryNames:
     #compute simpson diversity numerator
     #uses Counter, which is a quick way of counting number of occurrences of different tokens in a list
     #also uses list comprehension (see above)
-    sim_div_numerator=float(sum([Counter(completeLemmaList)[key]*(Counter(completeLemmaList)[key]-1) for key in Counter(completeWordList)]))
+    sim_div_numerator=float(sum([Counter(completeLemmaList)[key]*(Counter(completeLemmaList)[key]-1) for key in Counter(completeLemmaList)]))
     #current simpson diversity
     curSimpsonDiversity=sim_div_numerator/(N*(N-1))
     #add to list
